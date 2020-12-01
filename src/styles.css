@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  background: white;
+  width: 100%;
+}
+
+html, button, input, select, textarea, .pure-g [class*="pure-u"] {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 32px;
+  color: #3c3c3b;
+}
+
+@media screen and (min-width: 48em) {
+  h1 {
+    font-size: 36px;
+  }
+}
+

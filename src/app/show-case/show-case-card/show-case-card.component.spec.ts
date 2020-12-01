@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ShowCaseCardComponent } from './show-case-card.component';
+import {ShowCaseCardComponent} from './show-case-card.component';
 
 describe('ShowCaseCardComponent', () => {
   let component: ShowCaseCardComponent;

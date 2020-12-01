@@ -1,0 +1,28 @@
+<div class="d-flex flex-wrap justify-content-center mb-5">
+  <div class="filter-wrap col-sm-3">
+    <select [(ngModel)]="filter.subject" class="filter-input">
+      <option value="">Все предметы</option>
+      <option *ngFor="let subjectItem of removeDubs(subjectFilter$ | async)"
+              [value]="subjectItem">{{subjectItem}}</option>
+    </select>
+  </div>
+
+  <div class="filter-wrap col-sm-3">
+    <select [(ngModel)]="filter.genre" class="filter-input">
+      <option value="">Все жанры</option>
+      <option *ngFor="let genreItem of removeDubs(genreFilter$ | async)" [value]="genreItem">{{genreItem}}</option>
+    </select>
+  </div>
+  <div class="filter-wrap col-sm-3">
+    <select [(ngModel)]="filter.grade" class="filter-input">
+      <option value="">Все классы</option>
+      <option *ngFor="let gradeItem of gradeFilter" [value]="gradeItem">{{gradeItem}}</option>
+    </select>
+  </div>
+  <div class="filter-wrap col-sm-3">
+    <span class="input-group">
+    <input [(ngModel)]="filter.query" class="filter-input flex-box1" placeholder="Поиск" type="text">
+    <button (click)="onFilterChange()" class="search-button btn-primary btn"></button>
+    </span>
+  </div>
+</div>

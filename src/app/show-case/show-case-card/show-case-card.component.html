@@ -1,0 +1,22 @@
+<div class="square-cell">
+  <div class="courses-sci">
+    <div class="sci-figure">
+      <img [alt]="item.subject" [src]="'https://www.imumk.ru/svc/coursecover/' + item.courseId">
+    </div>
+    <div class="sci-info">
+      <p class="sci-title">{{item.subject}}</p>
+      <p class="sci-grade">{{getGradeString(item.grade)}}</p>
+      <p class="sci-genre">{{item.genre}}</p>
+      <p class="sci-meta"><a href="#">Подробнее</a></p>
+      <p class="sci-controls text-center">
+        <a *ngIf="!bonusSelected;else showBonusPrice " class="pure-button btn-primary"
+           href="#">{{' Цена: ' + item.price + ' руб'}}</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<ng-template #showBonusPrice>
+  <a class="pure-button btn-primary" href="#">{{' Бонусов: ' + item.priceBonus }}</a>
+
+</ng-template>

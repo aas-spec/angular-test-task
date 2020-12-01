@@ -1,4 +1,16 @@
-<div>
-  <app-show-case-card *ngFor="let item of items$ | async" [item]="item">
+<app-show-case-filter (filterChange)="setFilter($event)" [filter]="filter" [items$]="items$"></app-show-case-filter>
+<div class="d-flex justify-content-center">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label [ngClass]="{'active': !bonusSelected}" class="btn btn-secondary">
+      <input (change)="bonusSelected=false" autocomplete="off" checked id="option1" name="options" type="radio"> Рубли
+    </label>
+    <label [ngClass]="{'active': bonusSelected}" class="btn btn-secondary">
+      <input (change)="bonusSelected = true" autocomplete="off" id="option2" name="options" type="radio"> Бонусы
+    </label>
+  </div>
+</div>
+<br>
+<div class="d-flex flex-wrap justify-content-center">
+  <app-show-case-card *ngFor="let item of viewItems$ | async" [bonusSelected]="bonusSelected" [item]="item">
   </app-show-case-card>
 </div>
