@@ -23,5 +23,8 @@
   border: 0;
   border-radius: 4px;
 }
-
+.flex_box1 {
+  display: inline-block;
+  flex:1;
+}
 
