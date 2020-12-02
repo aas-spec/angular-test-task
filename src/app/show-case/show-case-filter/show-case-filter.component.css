@@ -16,6 +16,7 @@
 .btn-wrap {
   display:inline-block ;
   vertical-align: middle;
+  color: silver;
 }
 .search-button {
   display: inline-block;
@@ -24,7 +25,9 @@
   height: 32px;
   line-height: normal;
   background: #fff url("/assets/icon-search-25.png") center no-repeat;
-  border: 0;
+  border-width: 1px;
+  border-color: silver;
+  border-style: solid;
   border-radius: 4px;
 }
 .flex_box1 {
