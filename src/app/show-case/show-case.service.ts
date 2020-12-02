@@ -16,7 +16,8 @@ export interface CourseResponse {
 })
 
 export class ShowCaseService {
-  private readonly apiUrl = '/api/mobilev1/update';
+//  private readonly apiUrl = '/api/mobilev1/update';
+  private readonly apiUrl = 'https://krapipl.imumk.ru:8443/api/mobilev1/update';
   private storedItems: Course [] = [];
   private itemsSubj = new BehaviorSubject<Course[]>(this.storedItems);
   items$ = this.itemsSubj.asObservable();
