@@ -1,6 +1,6 @@
 <div class="ml-5">
   <div class="filter-wrap">
-    <select [(ngModel)]="filter.subject" class="filter-input">
+    <select [(ngModel)]="filter.subject" class="filter-input" (change)="onFilterChange()">
       <option value="">Все предметы</option>
       <option *ngFor="let subjectItem of removeDubs(subjectFilter$ | async)"
               [value]="subjectItem">{{subjectItem}}</option>
@@ -8,13 +8,13 @@
   </div>
 
   <div class="filter-wrap">
-    <select [(ngModel)]="filter.genre" class="filter-input">
+    <select [(ngModel)]="filter.genre" class="filter-input" (change)="onFilterChange()">
       <option value="">Все жанры</option>
       <option *ngFor="let genreItem of removeDubs(genreFilter$ | async)" [value]="genreItem">{{genreItem}}</option>
     </select>
   </div>
   <div class="filter-wrap">
-    <select [(ngModel)]="filter.grade" class="filter-input">
+    <select [(ngModel)]="filter.grade" class="filter-input" (change)="onFilterChange()">
       <option value="">Все классы</option>
       <option *ngFor="let gradeItem of gradeFilter" [value]="gradeItem">{{gradeItem}}</option>
     </select>
