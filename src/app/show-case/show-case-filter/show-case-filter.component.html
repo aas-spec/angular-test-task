@@ -1,5 +1,5 @@
-<div class="d-flex flex-wrap justify-content-center mb-5">
-  <div class="filter-wrap col-sm-3">
+<div class="ml-5">
+  <div class="filter-wrap">
     <select [(ngModel)]="filter.subject" class="filter-input">
       <option value="">Все предметы</option>
       <option *ngFor="let subjectItem of removeDubs(subjectFilter$ | async)"
@@ -7,22 +7,20 @@
     </select>
   </div>
 
-  <div class="filter-wrap col-sm-3">
+  <div class="filter-wrap">
     <select [(ngModel)]="filter.genre" class="filter-input">
       <option value="">Все жанры</option>
       <option *ngFor="let genreItem of removeDubs(genreFilter$ | async)" [value]="genreItem">{{genreItem}}</option>
     </select>
   </div>
-  <div class="filter-wrap col-sm-3">
+  <div class="filter-wrap">
     <select [(ngModel)]="filter.grade" class="filter-input">
       <option value="">Все классы</option>
       <option *ngFor="let gradeItem of gradeFilter" [value]="gradeItem">{{gradeItem}}</option>
     </select>
   </div>
-  <div class="filter-wrap col-sm-3">
-    <span class="input-group">
+  <div class="filter-wrap">
     <input [(ngModel)]="filter.query" class="flex_box1 filter-input" placeholder="Поиск" type="text">
-    <button (click)="onFilterChange()" class="search-button btn-primary btn"></button>
-    </span>
   </div>
+  <button (click)="onFilterChange()" class="search-button btn-primary btn-wrap"></button>
 </div>

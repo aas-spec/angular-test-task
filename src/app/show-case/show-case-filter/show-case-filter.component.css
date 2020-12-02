@@ -11,8 +11,12 @@
 
 .filter-wrap {
   min-width: 250px;
+  display: inline-block;
 }
-
+.btn-wrap {
+  display:inline-block ;
+  vertical-align: middle;
+}
 .search-button {
   display: inline-block;
   margin-left: 6px;
